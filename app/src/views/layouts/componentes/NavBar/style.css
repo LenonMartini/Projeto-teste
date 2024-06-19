@@ -1,0 +1,15 @@
+.navbar{
+    background-color: black;
+    border-bottom: 3px solid #ccc;
+}
+.link-orange{
+    color: rgb(255, 174, 0);
+}
+.link-orange:hover{
+    color: rgb(255, 174, 0);
+    border-bottom: 2px solid rgb(255, 174, 0);
+    
+}
+.nav-item .nav-link{
+    color:#ccc !important;
+}

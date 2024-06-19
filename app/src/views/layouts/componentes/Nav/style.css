@@ -1,0 +1,71 @@
+.nav {
+    height: 10%;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+}
+
+
+
+.content-logo .logo {
+    width: 200px; /* Largura do logo */
+}
+
+.nav-form .social-text{
+   
+    margin-bottom: -12px !important;
+   
+    
+}
+.nav-form .form-control{    
+    box-shadow: none !important;
+    border-color: #eee !important;
+}
+
+.nav-form .social-icons a{
+    color: black;
+}
+.form-group {
+    position: relative;
+}
+.form-group .icon-search{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #706f6f;
+}
+.form-group .form-control:focus {
+    border-color: #ccc !important; /* Ajuste a cor da borda de foco, se necessário */
+    box-shadow: none !important; /* Remover qualquer sombra de foco */
+}
+.nav-social{
+    position: relative;
+    margin-top: 28px !important;
+    
+    
+}
+.nav-social-icon-text{
+    font-size: 15px !important;
+}
+@media screen and (max-width: 900px) {
+    .nav-form .social-text p{
+        font-size: 11px !important;       
+    }
+    .nav-form .social-text{   
+        position: relative;
+        margin-bottom: -20px !important; 
+        line-height: 30px;      
+    }
+    .nav-form .social-icons{
+        min-width: 50px !important;
+       
+       
+    } 
+   
+}
+

@@ -8,7 +8,7 @@ export const Site = ({ children }) => {
     <div>
       <Nav />
       <NavBar />
-      <main className="container mt-5">
+      <main>
         {children}
       </main>
     </div>

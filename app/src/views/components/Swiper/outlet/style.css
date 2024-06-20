@@ -1,0 +1,93 @@
+.card-swiper{
+
+    height: 400px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card-swiper .card-img-top{
+    width: 220px !important;
+    height: 200px;
+    margin-top: 30px !important;
+}
+
+
+.balloon {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(179, 32, 32, 0.89) !important;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 10px;    
+    margin-top: 10px;
+}
+
+.balloon::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 8px 0;
+    border-style: solid;
+    border-color: rgba(179, 32, 32, 0.89) transparent transparent;
+}
+
+.tag-icon {
+    color: white;
+    margin-right: 1px;
+    margin-top: -6px;
+    font-size: 10px !important;
+}
+.swiper-button-prev{
+    position: relative;
+    margin-left: 30px;
+    color: rgb(110, 110, 110);
+    margin-top: -40px;
+}
+.swiper-button-next{
+    position: relative;
+    margin-left: 30px;
+    color: rgb(110, 110, 110);
+    margin-top: -40px;
+    
+}
+
+.card-swiper-title{
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    color: #696969 !important;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.card-swiper-cod{
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: 900 !important;
+    color: #a19f9f !important;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.card-swiper-price-original{
+    font-size: 15px !important;
+    font-family: monospace;
+    font-weight: 200 !important;
+    color: #a19f9f !important;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-decoration: line-through; 
+}
+.card-swiper-price{
+    font-size: 18px !important;
+    font-family: monospace;
+    font-weight: 900 !important;
+    color: #222222 !important;
+    margin-top: 5px;
+    margin-bottom: 10px;
+   
+}

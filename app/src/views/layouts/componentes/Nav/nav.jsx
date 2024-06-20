@@ -38,21 +38,21 @@ export const Nav = () => {
                         </div>
                         <div className="col-12 col-sm-12 col-md-4 col-lg-6">                            
                             <div className="row nav-social">
-                                <div className="col-12 col-sm-12 col-md-12 col-lg-4 text-center">
-                                    <FaCommentDots className="me-2"/> 
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-4 text-lg-center text-md-left text-sm-left text-left">
+                                    <FaCommentDots className="icon-social me-2"/> 
                                     <small className="nav-social-icon-text">Atendimento Online</small>
                                 </div>
-                                <div className="col-12 col-sm-12 col-md-12 col-lg-4 text-center">
-                                    <FaRegUser className="me-2" /> 
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-4 text-lg-center text-md-left text-sm-left text-left">
+                                    <FaRegUser className="icon-social me-2" /> 
                                     <small className="nav-social-icon-text">Minha Conta</small>
                                 </div>
-                                <div className="col-12 col-sm-12 col-md-12 col-lg-4 text-center">
-                                    <FaShoppingCart className="me-2" /> 
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-4 text-lg-center text-md-left text-sm-left text-left">
+                                    <FaShoppingCart className="icon-social me-2" /> 
                                     <small className="nav-social-icon-text">0 Items</small>
                                 </div>
                             </div>
-                           
                         </div>
+
 
                     </div>
                 </div>

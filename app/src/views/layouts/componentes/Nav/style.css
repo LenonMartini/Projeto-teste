@@ -52,6 +52,9 @@
 .nav-social-icon-text{
     font-size: 15px !important;
 }
+.icon-social:hover{
+    cursor: pointer;
+}
 @media screen and (max-width: 900px) {
     .nav-form .social-text p{
         font-size: 11px !important;       
@@ -62,10 +65,18 @@
         line-height: 30px;      
     }
     .nav-form .social-icons{
-        min-width: 50px !important;
+        min-width: 50px !important;       
        
-       
+    } 
+    .nav-social{
+        margin-top: -2px !important;
     } 
    
 }
+@media (max-width: 899px) {
+    .text-lg-center {
+        text-align: left !important;
+    }
+}
+
 

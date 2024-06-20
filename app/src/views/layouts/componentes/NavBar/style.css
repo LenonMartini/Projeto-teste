@@ -3,13 +3,26 @@
     border-bottom: 3px solid #ccc;
 }
 .link-orange{
-    color: rgb(255, 174, 0);
+    color: rgb(255, 174, 0) !important;
 }
-.link-orange:hover{
-    color: rgb(255, 174, 0);
-    border-bottom: 2px solid rgb(255, 174, 0);
-    
-}
+
 .nav-item .nav-link{
-    color:#ccc !important;
+    text-transform: uppercase !important;
 }
+
+.nav-item .nav-link::after{
+    display: none;
+}
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler-icon {
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+

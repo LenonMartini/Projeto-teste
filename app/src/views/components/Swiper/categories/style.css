@@ -1,0 +1,38 @@
+.card-swiper-categories{
+    height: 400px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none !important;
+    
+}
+.card-swiper-categories .card-img-top{
+    width: 100% !important;
+    height: 300px;
+    margin-top: 30px !important;
+}
+
+.swiper-button-prev{
+    position: relative;
+    margin-left: 30px;
+    color: rgb(110, 110, 110);
+    margin-top: -40px;
+}
+.swiper-button-next{
+    position: relative;
+    margin-left: 30px;
+    color: rgb(110, 110, 110);
+    margin-top: -40px;
+    
+}
+
+.card-swiper-categories .card-swiper-title{
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    color: #696969 !important;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+

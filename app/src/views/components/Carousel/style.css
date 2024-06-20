@@ -1,0 +1,100 @@
+.content-header{
+    display: flex;
+    justify-content: center;
+    line-height: 50;
+    align-items: center;
+    flex-direction: row;
+}
+.title-carousel {
+    margin-top: 20px !important;
+    text-transform: uppercase !important;
+    font-size: 20px !important;
+    display: flex;
+    align-items: center;
+  
+}
+.icon-corousel{
+    display: flex;
+    font-size: 15px !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 15px !important;
+    
+}
+.content-carousel{
+    display: flex;
+    justify-content: center;
+    gap: 10;
+    padding: 0px 0px 40px 0px;
+    
+}
+.card-item{
+    width: 100%;
+    margin: 0; /* Remove margens adicionais */
+    padding: 10px; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0px !important;
+    box-shadow: 5px 5px 5px #bebebe !important;
+    
+}
+.slide-in-left {
+    transform: translateX(-100%);
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+}
+
+.content-icon-outlet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px !important;
+}
+
+.balloon {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(179, 32, 32, 0.89) !important;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 10px;    
+    margin-top: 10px;
+}
+
+.balloon::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 8px 0;
+    border-style: solid;
+    border-color: rgba(179, 32, 32, 0.89) transparent transparent;
+}
+
+.tag-icon {
+    color: white;
+    margin-right: 1px;
+    margin-top: -6px;
+    font-size: 10px !important;
+}
+
+.comment-icon {
+    color: black; /* Ajuste a cor do ícone de comentário conforme necessário */
+}
+
+.balloon-text {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.card-img-top{
+    width: 70% !important;
+    height: 120px !important;
+}

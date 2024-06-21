@@ -3,6 +3,9 @@ import './style.css';
 import { BannerHeader } from '../components/Banner/header/banner-header';
 import { SwiperOtletComponent } from '../components/Swiper/outlet/swiper-outlet';
 import { SwiperCategoriesComponent } from '../components/Swiper/categories/swiper-categories';
+import { BannerContent } from '../components/Banner/content/banner-content';
+import { BannerFooter } from '../components/Banner/footer/banner-footer';
+import { CardArea } from '../components/Card/area/card-area';
 
 export const Home = () => {
   const BannerHeaderData = [
@@ -30,7 +33,7 @@ export const Home = () => {
       
     }
   ];
-  const BannerFooter = [ 
+  const BannerFooterData = [ 
     { 
       cod: 3,
       name:'Luminarias Loft Retrô', 
@@ -73,7 +76,18 @@ export const Home = () => {
         ],
     },
    
-]
+  ]
+  const areas = [
+   
+          { cod: 1, name: 'Sala de Estar', src: 'img/salaestar.png'},
+          { cod: 2, name: 'Varanda', src: 'img/varanda.png'},
+          { cod: 3, name: 'Banheiro', src: 'img/banheiro.png'},
+          { cod: 4, name: 'Jardim', src: 'img/jardim.png'},
+          { cod: 5, name: 'Cozinha', src: 'img/cozinha.png'},
+          { cod: 6, name: 'Quarto', src: 'img/quarto.png'},
+          
+     
+  ]
   return (
     <>
         <BannerHeader data={BannerHeaderData} />
@@ -83,7 +97,14 @@ export const Home = () => {
         <div className='container-fluid content-two'>
           <SwiperCategoriesComponent data={categories} />
         </div>
-       
+        <BannerContent data={BannerCenter} />
+        <div className='container-fluid content-three'>         
+            <CardArea data={areas}  />    
+        </div>
+        <BannerFooter data={BannerFooterData} />
+        <div className='container-fluid content-foor'>
+          ...
+        </div> 
     </>
   );
 };

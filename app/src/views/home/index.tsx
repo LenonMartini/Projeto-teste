@@ -6,6 +6,8 @@ import { SwiperCategoriesComponent } from '../components/Swiper/categories/swipe
 import { BannerContent } from '../components/Banner/content/banner-content';
 import { BannerFooter } from '../components/Banner/footer/banner-footer';
 import { CardArea } from '../components/Card/area/card-area';
+import { CardDetail } from '../components/Card/detalhes/card-detalhe';
+import { Footer } from '../layouts/componentes/Footer/footer';
 
 export const Home = () => {
   const BannerHeaderData = [
@@ -103,8 +105,9 @@ export const Home = () => {
         </div>
         <BannerFooter data={BannerFooterData} />
         <div className='container-fluid content-foor'>
-          ...
-        </div> 
+          <CardDetail />
+        </div>
+        <Footer /> 
     </>
   );
 };

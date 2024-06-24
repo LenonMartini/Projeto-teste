@@ -1,0 +1,13 @@
+.card-detail{
+    width: 100% !important;
+    background-color: #eee !important;
+    
+}
+.card-detail .card-title{
+    color: #473a2c;
+    font-weight: 600 !important;
+}
+.card-detail p{
+    color: #aaaaaa !important;
+    
+}

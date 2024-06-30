@@ -55,6 +55,14 @@
 .icon-social:hover{
     cursor: pointer;
 }
+.link{
+    text-decoration: none !important;
+    color: #000 !important;
+}
+.chat:hover{
+    cursor: pointer;
+  
+}
 @media screen and (max-width: 900px) {
     .nav-form .social-text p{
         font-size: 11px !important;       

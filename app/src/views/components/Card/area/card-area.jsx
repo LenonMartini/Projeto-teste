@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './style.css';
 export const CardArea = ({data}) => {
-    console.log(data);
+ 
     return (
         <>
             <div className="container">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import { BannerHeader } from '../components/Banner/header/banner-header';
 import { SwiperOtletComponent } from '../components/Swiper/outlet/swiper-outlet';
@@ -8,8 +8,10 @@ import { BannerFooter } from '../components/Banner/footer/banner-footer';
 import { CardArea } from '../components/Card/area/card-area';
 import { CardDetail } from '../components/Card/detalhes/card-detalhe';
 import { Footer } from '../layouts/componentes/Footer/footer';
+import EmpresaService from '../../services/empresa';
 
 export const Home = () => {
+  const [empresa, setEmpresa] = useState();
   const BannerHeaderData = [
     {
         cod: 1,
@@ -90,6 +92,15 @@ export const Home = () => {
           
      
   ]
+  useEffect(() => {
+    getEmpresa();
+  }, []);
+  const getEmpresa = async() =>{
+    const response = await EmpresaService.getAll();
+    if(response.data && response.statusCode === 200){
+      setEmpresa(response.data);
+    }
+  } 
   return (
     <>
         <BannerHeader data={BannerHeaderData} />

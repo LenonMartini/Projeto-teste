@@ -63,6 +63,9 @@
     cursor: pointer;
   
 }
+.profile:hover{
+    cursor: pointer;
+}
 @media screen and (max-width: 900px) {
     .nav-form .social-text p{
         font-size: 11px !important;       

@@ -1,0 +1,16 @@
+.container-fluid{
+    background-color: #eee !important;
+    height: 100vh !important;
+}
+.card-login {
+    margin-top: 150px !important;
+    border: 0px !important;
+    border-radius: 20px !important;
+    box-shadow: 1px 1px 1px 1px #ccc !important; 
+}
+.card-login .reset-password{
+    color: #807e7e;
+}
+.card-login .register{
+    color: #807e7e; 
+}

@@ -17,6 +17,7 @@ class EmpresaController extends Controller
         $this->empresaService = $empresaService;
     }
     public function index(){
+       
         try{
             $response = $this->empresaService->getAll();
             return (new EmpresaResource($response))->additional(['statusCode' => 200]);

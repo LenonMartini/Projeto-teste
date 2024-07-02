@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
 import './style.css'
 import { FaCommentDots, FaFacebookF, FaInstagram, FaRegUser, FaSearch, FaShoppingCart } from 'react-icons/fa';
 import EmpresaService from "../../../../services/empresa";
 import { Link } from "react-router-dom";
+import {AuthContext} from '../../../../contexts/Auth/AuthContext';
+import { useNavigate } from "react-router-dom";
 export const Nav = () => {
     const [empresa, setEmpresa] = useState();
+    const auth = useContext(AuthContext);
+    const navigate = useNavigate();
     useEffect(() => {
         getEmpresa();
+        
     }, []);
     const getEmpresa = async () => {
         const response = await EmpresaService.getAll();
         if (response.data && response.statusCode === 200) {
-            console.log(response.data);
+           
             setEmpresa(response.data);
         }
     }
@@ -22,6 +27,13 @@ export const Nav = () => {
             console.error('Link do WhatsApp não fornecido.');
         }
     };
+    const handleProfile = async () => {
+       if(auth.user){
+            navigate('/profile');
+       }else{
+            navigate('/login');
+       }
+    }   
     return (
         <>
             <ul className="nav">
@@ -64,9 +76,8 @@ export const Nav = () => {
                                 </div>
                                 <div className="col-12 col-sm-12 col-md-12 col-lg-4 text-lg-center text-md-left text-sm-left text-left">
                                     <FaRegUser className="icon-social me-2" />
-                                    <Link to="/home" className="link">
-                                        <small className="nav-social-icon-text">Minha Conta</small>
-                                    </Link>
+                                    <small className="nav-social-icon-text profile" onClick={handleProfile}>Minha Conta</small>
+                                    
                                 </div>
                                 <div className="col-12 col-sm-12 col-md-12 col-lg-4 text-lg-center text-md-left text-sm-left text-left">
                                     <FaShoppingCart className="icon-social me-2" />

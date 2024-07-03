@@ -30,7 +30,7 @@ export const Login = () => {
 
         if (valid) {
             // Lógica de envio dos dados para autenticação
-            console.log('Email:', email);
+            /*console.log('Email:', email);
             console.log('Senha:', password);
 
             // Simulação de lógica de autenticação
@@ -40,7 +40,7 @@ export const Login = () => {
             } else {
                 // Exemplo de mensagem de erro para email/senha incorretos
                 setEmailError('Email ou senha incorretos. Por favor, tente novamente.');
-            }
+            }*/
         }
     };
 

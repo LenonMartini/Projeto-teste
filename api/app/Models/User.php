@@ -19,30 +19,25 @@ class User extends Authenticatable implements JWTSubject
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'nome',
         'email',
-        'password',
+        'senha',
+        'status',
+        'cpf',
+        'celular',
+        'cep',
+        'cidade',
+        'logradouro',
+        'bairro',
+        'numero',
+        'complemento',
+        'uf'
     ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
+    public $table = 'tb_pessoa';
+  
     protected $hidden = [
-        'password',
-        'remember_token',
+        'senha',
     ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
     public function getJWTIdentifier()
     {
         return $this->getKey();
@@ -56,5 +51,9 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+    public function getAuthPassword()
+    {
+        return $this->senha;
     }
 }

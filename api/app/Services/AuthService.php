@@ -11,15 +11,11 @@ class AuthService
     public function login(string $email, string $password)
     {
         $user = User::where('email', $email)->first();
-
+       
         if (!$user || !Auth::attempt(['email' => $email, 'password' => $password])) {
             throw new UnauthorizedException();
         }
-
-        if (!$user->role_id) {
-            throw new UnauthorizedException('Usuário sem Permissão de Acesso');
-        }
-
+        
         if (!$user->status) {
             throw new UnauthorizedException('Usuário desativado');
         }

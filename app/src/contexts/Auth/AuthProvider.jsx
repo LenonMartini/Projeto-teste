@@ -1,23 +1,36 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
+import cookie from '../../services/cookie';
+import { AuthService } from '../../services/auth';
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const auth = useContext(AuthContext);
+    const api = AuthService();
     useEffect(() => {
         const validateToken = async () => {
-            auth.user = 'Lenon Emanuel Martini'
+            const token = cookie.getToken();
+            if(token){
+                auth.user = (JSON.parse(token));
+                setUser(JSON.parse(token));
+            }else{
+                cookie.deleteToken();
+                setUser(null);
+            }
         }
         validateToken();
     }, []); 
     
-    const signin = async (email, password) => {
-        // Simulação de autenticação
-        if (email === "admin@example.com" && password === "password") {
-            const userData = { email };
-            setUser(userData);
+    const signin = async (email, senha) => {       
+        const response = await api.login(email, senha); 
+        if(response.data && response.statusCode === 200){            
+           
+            cookie.setToken(JSON.stringify(response.data));
+            await setUser(response.data);
+            auth.user = user;
             return true;
-        }
+           
+        }      
         return false;
     };
 

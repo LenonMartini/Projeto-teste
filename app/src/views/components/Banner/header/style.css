@@ -1,7 +1,12 @@
+.container-banner-first{
+   min-width: 100% !important; 
+   background-color: red !important;
+}
 .banner-container {
     position: relative;
     width: 100%;
     height: auto;
+   
 }
 
 .banner-img {
@@ -20,6 +25,7 @@
     text-align: left;
     width: auto;
     padding: 0 15px; 
+    
 }
 
 .banner-name {

@@ -104,18 +104,18 @@ export const Home = () => {
   return (
     <>
         <BannerHeader data={BannerHeaderData} />
-        <div className='container-fluid content-first'>              
+        <div className='content-first '>              
           <SwiperOtletComponent data={outlets} />
         </div>
-        <div className='container-fluid content-two'>
+        <div className='content-two'>
           <SwiperCategoriesComponent data={categories} />
         </div>
         <BannerContent data={BannerCenter} />
-        <div className='container-fluid content-three'>         
+        <div className='content-three'>         
             <CardArea data={areas}  />    
         </div>
         <BannerFooter data={BannerFooterData} />
-        <div className='container-fluid content-foor'>
+        <div className='content-foor'>
           <CardDetail />
         </div>
         <Footer /> 

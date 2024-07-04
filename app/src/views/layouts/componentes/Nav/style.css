@@ -45,8 +45,7 @@
 }
 .nav-social{
     position: relative;
-    margin-top: 28px !important;
-    
+    margin-top: 28px !important;    
     
 }
 .nav-social-icon-text{
@@ -66,6 +65,12 @@
 .profile:hover{
     cursor: pointer;
 }
+.dropdown-toggle{
+    text-decoration: none !important;
+    color: black;
+   
+}
+
 @media screen and (max-width: 900px) {
     .nav-form .social-text p{
         font-size: 11px !important;       

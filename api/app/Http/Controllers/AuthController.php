@@ -17,12 +17,14 @@ class AuthController extends Controller
     }
     public function login(AuthRequest $request){
         try{
+           
             $input = $request->validated();
-            $response = $this->authService->login($input['email'], $input['password']);
+            $response = $this->authService->login($input['email'], $input['senha']);
             if(!$response){
                 throw new UnauthorizedException();
             }
-            return (new AuthResource($response));
+        
+            return (new AuthResource($response))->additional(['statusCode' => 200]);
 
         }catch(\Exception $e){
             return response()->json(['error' => $e->getMessage()], 401);

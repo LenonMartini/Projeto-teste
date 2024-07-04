@@ -4,7 +4,7 @@ import './style.css';
 export const BannerFooter = ({ data }) => {
     
     return (
-        <div className="container-fluid">
+        <div className="container-banner-footer">
             <div className="row">
                 {data.map((banner, index) => (
                     <div className="col-12 p-0 position-relative" key={index}>

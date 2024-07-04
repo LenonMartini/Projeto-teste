@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 export const BannerHeader = ({ data }) => {
     
     return (
-        <div className="container-fluid">
+        <div className="container-banner-first bg-danger">
             <div className="row">
                 {data.map((banner, index) => (
                     <div className="col-12 p-0 position-relative banner-container" key={index}>

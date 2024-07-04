@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
-    text-align: left; 
+    text-align: left;
     width: auto;
     padding: 0 15px; 
 }

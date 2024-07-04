@@ -36,7 +36,7 @@ export const Carousel = ({ data }) => {
                 </div>
             </div>
             <div className="container">
-                <div className="row mt-4">
+                <div className="row mt-2">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12">
                         <div className="row content-carousel d-flex justify-content-center">
                             {items.map((item, index) => (

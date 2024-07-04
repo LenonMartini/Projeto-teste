@@ -24,7 +24,7 @@ export const SwiperCategoriesComponent = ({ data }) => {
   return (
     <div className="container p-4">
       <div className="row">
-        <div className="col-12 d-flex align-items-center justify-content-center mt-2 mb-3">          
+        <div className="col-12 d-flex align-items-center justify-content-center mt-1 mb-3">          
             <h4 className="text-uppercase">{data[0].title}</h4>
             <FaAngleLeft className="swiper-button-prev" onClick={goPrev} />
             <FaAngleRight className="swiper-button-next" onClick={goNext} />

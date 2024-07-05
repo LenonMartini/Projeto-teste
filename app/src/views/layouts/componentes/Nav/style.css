@@ -70,7 +70,9 @@
     color: black;
    
 }
-
+.navbar-nav li a{
+    text-transform: lowercase !important;
+}
 @media screen and (max-width: 900px) {
     .nav-form .social-text p{
         font-size: 11px !important;       

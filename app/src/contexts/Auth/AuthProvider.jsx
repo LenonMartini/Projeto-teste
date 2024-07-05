@@ -11,8 +11,9 @@ const AuthProvider = ({ children }) => {
         const validateToken = async () => {
             const token = cookie.getToken();
             if(token){
-                auth.user = (JSON.parse(token));
-                setUser(JSON.parse(token));
+                
+                auth.user = await (JSON.parse(token));
+                setUser(auth.user);
             }else{
                 cookie.deleteToken();
                 setUser(null);
@@ -23,10 +24,9 @@ const AuthProvider = ({ children }) => {
     
     const signin = async (email, senha) => {       
         const response = await api.login(email, senha); 
-        if(response.data && response.statusCode === 200){            
-           
-            cookie.setToken(JSON.stringify(response.data));
-            await setUser(response.data);
+        if(response.data && response.statusCode === 200){   
+            setUser(response.data);          
+            cookie.setToken(JSON.stringify(response.data));            
             auth.user = user;
             return true;
            
@@ -34,8 +34,20 @@ const AuthProvider = ({ children }) => {
         return false;
     };
 
-    const signout = () => {
-        setUser(null);
+    const signout = async() => {
+        const token = await cookie.getToken();
+        if(token){
+           
+            const response = await api.logout();
+            if(response.message){
+                cookie.deleteToken();
+                auth.user = null;
+                setUser(null);
+            }           
+            
+        }
+        
+        
     };
 
     const getImage = async () => {
